@@ -692,7 +692,7 @@ MonoBehaviour:
   removeObstacleKey: 38
   testObstaclePosition: {x: 2, y: 2}
   spawnRandomObstacles: 0
-  spawnInterval: 2
+  spawnInterval: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
