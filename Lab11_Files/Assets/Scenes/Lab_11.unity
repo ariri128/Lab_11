@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 2045453860}
   - component: {fileID: 2045453859}
   - component: {fileID: 2045453861}
+  - component: {fileID: 2045453862}
   m_Layer: 0
   m_Name: GridPathfinder
   m_TagString: Untagged
@@ -675,6 +676,23 @@ MonoBehaviour:
   maxAttempts: 50
   useSeed: 0
   seed: 12345
+--- !u!114 &2045453862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045453858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e53d71b87124e45bdfda5f8449d212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleEditor
+  addObstacleKey: 29
+  removeObstacleKey: 38
+  testObstaclePosition: {x: 2, y: 2}
+  spawnRandomObstacles: 0
+  spawnInterval: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
