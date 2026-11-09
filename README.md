@@ -11,9 +11,9 @@
 
 **2. What challenges arise when dynamically updating obstacles in real time?** <br>
 <blockquote>
-  * **The current path can become outdated.** If a new obstacle lands on the path, the path has to be recalculated. My _AddObstacle_ method checks whether the cell is on the current path before turning it into a wall, and only recalculates if it is. If the cell isn't on the path, the path is still valid, because adding a wall can't create a shorter route.
-  * **Removing obstacles is different.** Removing a wall can open up a shorter path, so the path should always be recalculated after a removal.
-  * **Performance.** Recalculating the whole path every time something changes is fine on a small grid. On a big map with many characters, or with obstacles changing every frame, it can slow the game down. Algorithms like D* Lite or LPA* help by updating only the part of the path that was affected.
-  * **Edge cases.** An obstacle could be placed on the start or goal, or it could block off the goal completely. My code doesn't allow walls on the start or goal, and when no path exists it logs a message instead of crashing.
-  * **Moving characters.** In an actual game, a character might already be walking along the path when it gets blocked. It would need to recalculate from where it currently is, not from the original start.
+* **The current path can become outdated.** If a new obstacle lands on the path, the path has to be recalculated. My _AddObstacle_ method checks whether the cell is on the current path before turning it into a wall, and only recalculates if it is. If the cell isn't on the path, the path is still valid, because adding a wall can't create a shorter route.
+* **Removing obstacles is different.** Removing a wall can open up a shorter path, so the path should always be recalculated after a removal.
+* **Performance.** Recalculating the whole path every time something changes is fine on a small grid. On a big map with many characters, or with obstacles changing every frame, it can slow the game down. Algorithms like D* Lite or LPA* help by updating only the part of the path that was affected.
+* **Edge cases.** An obstacle could be placed on the start or goal, or it could block off the goal completely. My code doesn't allow walls on the start or goal, and when no path exists it logs a message instead of crashing.
+* **Moving characters.** In an actual game, a character might already be walking along the path when it gets blocked. It would need to recalculate from where it currently is, not from the original start. <br>
 </blockquote>
