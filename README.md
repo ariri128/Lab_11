@@ -1,6 +1,6 @@
 # Lab_11
 
-1. How does each pathfinding algorithm calculate and prioritize paths?
+**1. How does each pathfinding algorithm calculate and prioritize paths?**<br>
   All three scripts work in a similar way. Each one keeps a list of cells to check next (the frontier) and a `cameFrom` dictionary that remembers how each cell was reached. Once the goal is reached, the path is built by following `cameFrom` backward from the goal to the start. The main difference is how each algorithm decides which cell to check next.<br>
   * **BFS** uses a regular queue, so it checks cells in the order it found them. It spreads out evenly from the start, one step at a time. Since every move in our grid costs the same, the first path it finds to the goal is also the shortest. BFS doesn't look at movement costs, though, so on a weighted grid it might not find the cheapest path.
   * **Dijkstra** uses a priority queue and always checks the cell with the lowest total cost from the start, g(n). If it finds a cheaper way to reach a cell, it updates that cell. This guarantees the cheapest path even when cells have different costs. The downside is that it searches in every direction, even away from the goal.
